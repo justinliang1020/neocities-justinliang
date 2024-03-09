@@ -1,0 +1,2 @@
+# added to prevent pushing ./git files when running `neocities push .`
+.git
