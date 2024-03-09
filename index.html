@@ -4,22 +4,94 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Justin Liang</title>
-    <link href="style.css" rel="stylesheet" type="text/css" media="all" />
     <link
       rel="icon"
       type="image/png"
       href="https://neocities.org/favicon.ico"
     />
+    <style>
+      #blur {
+        font-size: 40px;
+        color: transparent;
+        text-shadow: 0 0 8px white;
+      }
+      body {
+        /* background-image: url(/assets/serial-experiments-lain-lain.gif); */
+        background-color: #000000;
+        height: 100vh;
+        overflow: hidden;
+      }
+      #header {
+        text-align: center;
+      }
+
+      #main {
+        text-align: center;
+      }
+      .center-img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 40%;
+      }
+      /* #container {
+        width: 100%;
+      } */
+    </style>
   </head>
-  <body class="scroll">
+  <body>
     <div id="container">
       <div id="header">
         <h1 class="title">Justin Liang</h1>
       </div>
-      <div id="main">
-        <h1>constructing... again</h1>
-        <a href="https://www.justinliang.me/">justinliang.me</a>
+      <div id="blur" style="text-align: center; font-size: 2rem; color: white">
+        <script type="text/javascript">
+          window.onload = function () {
+            var currentDate = new Date();
+            var year = currentDate.getFullYear();
+            var month = currentDate.getMonth() + 1;
+            var day = currentDate.getDate();
+            function getOrdinalSuffix(day) {
+              if (day > 3 && day < 21) return "th";
+              switch (day % 10) {
+                case 1:
+                  return "st";
+                case 2:
+                  return "nd";
+                case 3:
+                  return "rd";
+                default:
+                  return "th";
+              }
+            }
+            ordinal_suffix = getOrdinalSuffix(day);
+            document.getElementById(
+              "year_month"
+            ).textContent = `year ${year}; month ${month}`;
+            document.getElementById(
+              "day"
+            ).textContent = `the ${day}${ordinal_suffix} day`;
+          };
+        </script>
+        <div id="year_month">year UNDEFINED, month UNDEFINED</div>
+        <div id="day">day UNDEFINED</div>
       </div>
+      <div style="text-align: center; color: white; padding-top: 20px; padding-bottom: 20px">
+        <a href="https://www.justinliang.me/" style="color: ghostwhite"
+          >welcome to justin</a
+        >
+      </div>
+      <div>
+        <img
+          src="./assets/shinji_bw.png"
+          class="center-img"
+          style="width: 30vw"
+        />
+      </div>
+      <!-- <div id="main">
+      <h1>constructing... again</h1>
+      <a href="https://www.justinliang.me/">justinliang.me</a>
+    </div> -->
     </div>
   </body>
 </html>
