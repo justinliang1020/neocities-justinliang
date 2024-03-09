@@ -1,5 +1,5 @@
 body {
-  background-image: url(https://justinliang.neocities.org/serial-experiments-lain-lain.gif)
+  background-image: url(/assets/serial-experiments-lain-lain.gif)
 }
 
 #header {
@@ -7,5 +7,6 @@ body {
 }
 
 #main {
-  text-align: center
+  text-align: center;
+  background-color: blue;
 }
